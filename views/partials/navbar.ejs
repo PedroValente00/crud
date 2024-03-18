@@ -1,0 +1,20 @@
+<%
+const isPage = (name) => { 
+if(!page){
+    return "";
+}else{
+    if(page === name){
+        return "active"
+    }else{
+        return
+    }
+}}
+%>   
+
+<nav class="nav">
+<a href="/products" class="<%= isPage("products") %>">Home</a>
+<a href="/create" class="<%= isPage("create") %>">Register new product</a>
+<a href="/empty" class="<%= isPage("empty") %>">Delete all products</a>
+<a href="/generate" class="<%= isPage("generate") %>">Generate random products</a>
+<a href="/about" class="<%= isPage("about") %>">About</a>
+</nav>

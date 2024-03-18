@@ -1,0 +1,149 @@
+body{
+    font-size: 1.2em;
+}
+
+.nav{
+    background-color: rgb(77, 50, 235);
+    display: flex;
+}
+
+.nav a{
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+}
+
+.nav a:hover{
+    background-color: rgb(246 74 74)
+}
+
+.flex--center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.product {
+    width: 300px;
+    height: 280px;
+    text-decoration: none;
+    margin: 1em;
+    text-align: center;
+    padding: 1em;
+    color: black;
+    border: 2px solid white;
+    overflow: auto;
+}
+
+.product .img{
+    filter:opacity(0.8) saturate(0.8);
+}
+
+.name{
+    font-size: 1.6em;
+}
+
+.img{
+    height: 5em;
+    margin: 1em;
+}
+
+.footer{
+    margin: 1em 2em 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.product:hover{
+    border: 2px solid green;
+}
+
+.product:hover .img{
+    filter: opacity(1) saturate(1) drop-shadow(1px 1px 1px green)
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 2em;
+}
+
+.form input, .form textarea{
+    padding: 0.2em;
+}
+
+.form label {
+    margin-top: 1em;
+    margin-bottom: 0.2em;
+}
+
+.submit__button{
+    width: 12em;
+    padding: 1em;
+    margin: 2em auto;
+}
+
+ .details{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center; 
+    margin-top: 5em;
+}
+
+.centered {
+    text-align: center;
+}
+
+.block {
+    display: block;
+}
+
+.margined {
+    margin: 1em;
+}
+
+.details .options{
+    margin-top: 5em;
+}
+
+.details .options button{
+padding: 1em;
+margin: 0.5em;
+}
+
+.details .options form{
+    display: inline;
+}
+
+.details .options a{
+    text-decoration: none;
+}
+
+.aligned{
+    width: 50vw;
+    margin: 12em auto;
+    text-align: center;
+}
+
+.aligned button{
+    padding: 0.5em 1em;
+}
+
+.aligned input {
+    width: 100px;
+}
+
+.active{
+    background-color: #282861;
+    border-bottom: 2px solid red;
+}

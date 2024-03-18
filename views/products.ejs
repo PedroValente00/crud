@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include("partials/navbar", {page:"products"}) %>
+    
+    <main class="flex--center">
+            
+    <% for (product of products) { %>
+        <a href="/products/<%= product.id %>" class="product">
+        <article>
+        <section class="name"><%= product.name %></section>
+        <img class="img" src="images/<%= Math.floor (Math.random() *6) +1 %>.png" alt="picture">
+        <section><%= product.description %></section>
+        
+        <footer class="footer">
+            <section class="price">Price: <%= product.price %> €</section>
+            <section class="quantity">In stock: <%= product.quantity %></section>
+        </footer>
+    </article>
+</a>
+    <% } %>
+
+    <% if (!products.length){ %>
+        <section class="margined">
+            <p>There are no products to show.</p>
+            <p>Create <a href="/create">one</a> or <a href="/generate">generate</a> some?</p>
+        </section>
+    <% } %>
+</main>
+</body>
+</html>

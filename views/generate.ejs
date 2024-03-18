@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Generate products</title>
+</head>
+
+<body>
+    <%- include("partials/navbar", {page:"generate"}) %>
+        <main class="aligned">
+            <section>
+                <p>This will empty the database and populate it with a list of up to 100 randomized products.</p>
+            </section>
+            <form action="/generate" method="POST">
+                <input required type="number" name="quantity" min="1" max="100" placeholder="Quantity">
+                <p><button type="submit">Generate</button></p>
+            </form>
+        </main>
+</body>
+
+</html>

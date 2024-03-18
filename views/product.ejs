@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title><%= product.name %></title>
+</head>
+<body>
+    <%- include("partials/navbar", {page:"product"}) %>
+    <main class="details">
+            <article class="centered">
+            <section class="name"><%= product.name %></section>
+            <img class="img margined" src="/images/<%= Math.floor (Math.random() *6) +1 %>.png" alt="picture">
+            <textarea disabled class="block" disabled cols="60" rows="10"><%= product.description %></textarea>
+            
+            
+            <footer class="footer">
+                <section class="price">Price: <%= product.price %> €</section>
+                <section class="quantity">In stock: <%= product.quantity %></section>
+            </footer>
+        </article>
+
+        <article class="centered options">
+
+            <a href="/product/<%= product.id %>/edit">
+                <button> Edit product</button>
+            </a>
+                <form action="/product/<%= product.id %>?_method=DELETE" method="post">
+            <button> Delete product</button>
+        </form>
+
+        </article>
+    </main>
+</body>
+</html>
+

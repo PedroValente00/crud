@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Edit product</title>
+</head>
+<body>
+    <%- include("partials/navbar", {page:"edit"}) %>
+    <main>
+        <form class="form" action="/product/<%= product.id %>/edit?_method=PATCH" method="post">
+            <label for="name">Name:</label>
+            <input required type="text" name="name" id="name" placeholder="Product name" value="<%= product.name %>" maxlength="25">
+            
+            <label for="description">Description: </label>
+            <textarea required name="description" id="description" cols="30" rows="10" placeholder="Product description" maxlength="200"><%= product.description %></textarea>
+            
+            <label for="price">Price (€) : </label>
+            <input required type="number" name="price" id="price" placeholder="Product price" step="any" value="<%= product.price %>" max="999">
+
+            <label for="quantity">Quantity: </label>
+            <input required type="number" name="quantity" id="quantity" placeholder="Number in stock" value="<%= product.quantity %>" max="999">
+
+            <button required type="submit" class="submit__button"> Update product</button>
+        </form>
+    </main>
+</body>
+</html>

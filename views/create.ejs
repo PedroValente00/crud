@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Register a product</title>
+</head>
+<body>
+    <%- include("partials/navbar", {page:"create"}) %>
+    <main>
+        <form class="form" action="/products" method="post">
+
+            <label for="name">Name:</label>
+            <input required type="text" name="name" id="name" placeholder="Product name" maxlength="25">
+
+            
+            <label for="description">Description: </label>
+            <textarea required name="description" id="description" cols="30" rows="10" placeholder="Product description" maxlength="200"></textarea>
+            
+            <label for="price">Price (€) : </label>
+            <input required type="number" name="price" id="price" placeholder="Product price" step="any" max="999">
+
+            <label for="quantity">Quantity: </label>
+            <input required type="number" name="quantity" id="quantity" placeholder="Number in stock" max="999">
+
+            <button type="submit" class="submit__button">Register new product</button>
+        </form>
+    </main>
+</body>
+</html>
