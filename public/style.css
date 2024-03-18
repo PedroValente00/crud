@@ -164,11 +164,12 @@ body {
 
     .product {
         padding: 0.2em;
-        margin: 0.5em;
+        margin: 0.8em 0.5em;
     }
 
     .product .img {
         filter: opacity(1) saturate(1);
+        height: 4em;
     }
 
     textarea {
@@ -181,5 +182,11 @@ body {
 
     .aligned {
         margin: 10em auto;
+    }
+    .details{
+        margin-top: 2em;
+    }
+    .submit__button{
+        margin-bottom: 0;
     }
 }
