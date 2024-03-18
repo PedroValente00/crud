@@ -1,8 +1,10 @@
+require('dotenv').config()
 const express = require("express");
 const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
-mongoose.connect('mongodb://127.0.0.1:27017/webshop2');
+const atlas = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@webshop.zxvdwhb.mongodb.net/?retryWrites=true&w=majority&appName=webshop`;
+mongoose.connect(atlas);
 const {Product, attributes, names, random} = require("./db.js")
 const methodOverride = require('method-override');
 
