@@ -159,7 +159,7 @@ body {
     }
 
     .nav a {
-        padding: 0.1em;
+        padding: 0.2em;
     }
 
     .product {
@@ -169,12 +169,17 @@ body {
 
     .product .img {
         filter: opacity(1) saturate(1);
-        /* height: 3em; */
     }
-    textarea{
+
+    textarea {
         width: 80vw;
     }
-    .active{
-        border:none
+
+    .active {
+        border: none
+    }
+
+    .aligned {
+        margin: 10em auto;
     }
 }
